@@ -1,4 +1,4 @@
-import '@aws-cdk/assert/jest'
+import '@aws-cdk/assert/jest';
 import { Stack } from '@aws-cdk/cdk';
 import xxx = require('../lib');
 
