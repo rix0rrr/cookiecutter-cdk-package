@@ -1,0 +1,81 @@
+{
+  "name": "{{cookiecutter.package_name}}",
+  "version": "{{cookiecutter.current_version}}",
+  "description": "CDK Constructs for AWS XXX",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "java": {
+        "package": "software.amazon.awscdk.services.xxx",
+        "maven": {
+          "groupId": "software.amazon.awscdk",
+          "artifactId": "xxx"
+        }
+      },
+      "dotnet": {
+        "namespace": "Amazon.CDK.AWS.XXX",
+        "packageId": "Amazon.CDK.AWS.XXX",
+        "signAssembly": true,
+        "assemblyOriginatorKeyFile": "../../key.snk"
+      },
+      "python": {
+        "distName": "aws-cdk.aws-xxx",
+        "module": "aws_cdk.aws_xxx"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awslabs/aws-cdk.git",
+    "directory": "packages/{{cookiecutter.package_name}}"
+  },
+  "scripts": {
+    "build": "cdk-build",
+    "watch": "cdk-watch",
+    "lint": "cdk-lint",
+    "test": "cdk-test",
+    "integ": "cdk-integ",
+    "pkglint": "pkglint -f",
+    "package": "cdk-package",
+    "awslint": "cdk-awslint",
+    "cfn2ts": "cfn2ts",
+    "build+test+package": "npm run build+test && npm run package",
+    "build+test": "npm run build && npm test"
+  },
+  "cdk-build": {
+    "cloudformation": "AWS::Xxx"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "constructs",
+    "xxx"
+  ],
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com",
+    "organization": true
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@aws-cdk/assert": "^{{cookiecutter.current_version}}",
+    "cdk-build-tools": "^{{cookiecutter.current_version}}",
+    "cdk-integ-tools": "^{{cookiecutter.current_version}}",
+    "cfn2ts": "^{{cookiecutter.current_version}}",
+    "pkglint": "^{{cookiecutter.current_version}}"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-iam": "^{{cookiecutter.current_version}}",
+    "@aws-cdk/cdk": "^{{cookiecutter.current_version}}"
+  },
+  "homepage": "https://github.com/awslabs/aws-cdk",
+  "peerDependencies": {
+    "@aws-cdk/aws-iam": "^{{cookiecutter.current_version}}",
+    "@aws-cdk/cdk": "^{{cookiecutter.current_version}}"
+  },
+  "engines": {
+    "node": ">= 8.10.0"
+  }
+}
